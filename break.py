@@ -33,12 +33,23 @@ riahanna = {'wild thoughts':'https://www.youtube.com/watch?v=fyaI4-5849w',
 "Work (Explicit) feat Drake":'https://www.youtube.com/watch?v=m2hI1_UBN2c',
 'diamonds':"https://www.youtube.com/watch?v=lWA2pjMjpBs"}
 
-singers = ['Michael Jackson','Shakira', 'Rihanna']
+britney = {'circus':"https://www.youtube.com/watch?v=lVhJ_A8XUgc",
+'pretty girls':"https://www.youtube.com/watch?v=uV2uebhnqOw",
+'till the world ends':"https://www.youtube.com/watch?v=qzU9OrZlKb8",
+'oops I did it again':"https://www.youtube.com/watch?v=CduA0TULnow",
+'womanizer':'https://www.youtube.com/watch?v=rMqayQ-U74s',
+'I wanna go':"https://www.youtube.com/watch?v=T-sxSd1uwoU",
+'work bitch':"https://www.youtube.com/watch?v=pt8VYOfr8To",
+'Toxic':'https://www.youtube.com/watch?v=LOZuxwVk7TU',
+'baby one more time':'https://www.youtube.com/watch?v=C-u5WLJ9Yk4',
+'scream and shout':'https://www.youtube.com/watch?v=kYtGl1dX5qI'}
+
+singers = ('Michael Jackson','Shakira', 'Rihanna')
 
 print('From which one do you want to watch? \n1.Michael Jackson\n2.Shakira\n3.Rihnna')
 while True:
     selected_singer = input()
-    if selected_singer.isdigit() and 1 <= int(selected_singer) <= 3:
+    if selected_singer.isdigit() and 1 <= int(selected_singer) <= len(singers):
         break
     else:
         print('Please type a number between 1 and ',len(singers))
