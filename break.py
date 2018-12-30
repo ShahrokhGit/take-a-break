@@ -35,7 +35,15 @@ riahanna = {'wild thoughts':'https://www.youtube.com/watch?v=fyaI4-5849w',
 
 singers = ['Michael Jackson','Shakira', 'Rihanna']
 
-selected_singer = raw_input('From which one do you want to watch? \n 1.Michael michael_jackson\n2.Shakira\n3.Rihnna')
+print('From which one do you want to watch? \n1.Michael Jackson\n2.Shakira\n3.Rihnna')
+while True:
+    selected_singer = input()
+    if selected_singer.isdigit() and 1 <= int(selected_singer) <= 3:
+        break
+    else:
+        print('Please type a number between 1 and ',len(singers))
+        pass
+
 video = random.choice(list(michael_jackson.keys()))
 print("Michael Jackson video: ",video, 'is playing, enjoy!')
 # web.open(michael_jackson[video])
