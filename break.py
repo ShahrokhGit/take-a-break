@@ -44,6 +44,16 @@ while True:
         print('Please type a number between 1 and ',len(singers))
         pass
 
+print("How often do you want me to play music video? (Please type in min)")
+
+while True:
+    wait_time = input()
+    if wait_time.isdigit():
+        break
+    else:
+        print('Oops!, type a digit.')
+
+
 video = random.choice(list(michael_jackson.keys()))
 print("Michael Jackson video: ",video, 'is playing, enjoy!')
 # web.open(michael_jackson[video])
