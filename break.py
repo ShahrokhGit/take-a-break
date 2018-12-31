@@ -1,6 +1,7 @@
 import webbrowser as web
 import random
 import sys
+import time
 
 print('The code is running under python version: ', sys.version)
 # Database for Michael Jackson
@@ -26,7 +27,7 @@ shakira = {"hips don't lie":"https://www.youtube.com/watch?v=DUT5rEU6pqM",
 'chantaje':"https://www.youtube.com/watch?v=6Mgqbai3fKo",
 'Rabiosa':"https://www.youtube.com/watch?v=a5irTX82olg"}
 
-riahanna = {'wild thoughts':'https://www.youtube.com/watch?v=fyaI4-5849w',
+rihanna = {'wild thoughts':'https://www.youtube.com/watch?v=fyaI4-5849w',
 'Only girl (in the world)':"https://www.youtube.com/watch?v=pa14VNsdSYM",
 'stay (feat Mikky Ekko)':"https://www.youtube.com/watch?v=JF8BRvqGCNs",
 "what's my name? (feat Drake)":"https://www.youtube.com/watch?v=U0CGsw6h60k",
@@ -78,7 +79,38 @@ while True:
     else:
         print('Oops!, type a digit.')
 
-
-video = random.choice(list(michael_jackson.keys()))
-print("Michael Jackson video: ",video, 'is playing, enjoy!')
-# web.open(michael_jackson[video])
+if selected_singer == 1:
+    while True:
+        video = random.choice(list(michael_jackson.keys()))
+        print("Michael Jackson video: ",video, 'is playing, enjoy!')
+        time.sleep(3)
+        web.open(michael_jackson[video])
+        time.sleep(wait_time*60)
+elif selected_singer == 2:
+    while True:
+        video = random.choice(list(shakira.keys()))
+        print("Shakira video: ",video, 'is playing, enjoy!')
+        time.sleep(3)
+        web.open(shakira[video])
+        time.sleep(wait_time*60)
+elif selected_singer == 3:
+    while True:
+        video = random.choice(list(rihanna.keys()))
+        print("Rihanna video: ",video, 'is playing, enjoy!')
+        time.sleep(3)
+        web.open(rihanna[video])
+        time.sleep(wait_time*60)
+elif selected_singer == 4:
+    while True:
+        video = random.choice(list(britney_spears.keys()))
+        print("Britney video: ",video, 'is playing, enjoy!')
+        time.sleep(3)
+        web.open(britney_spears[video])
+        time.sleep(wait_time*60)
+elif selected_singer == 5:
+    while True:
+        video = random.choice(list(enrique_iglesias.keys()))
+        print("Enrique video: ",video, 'is playing, enjoy!')
+        time.sleep(3)
+        web.open(enrique_iglesias[video])
+        time.sleep(wait_time*60)
